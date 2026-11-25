@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Brasa Burger · Hamburgueria artesanal em Foz do Iguaçu (modelo demonstrativo)</title>
+  <meta name="description" content="Hambúrguer artesanal na brasa em Foz do Iguaçu: carne moída no dia, pão brioche da casa e costela defumada 12 h. Peça direto pelo WhatsApp. Modelo demonstrativo do Estúdio Forja.">
+  <meta name="robots" content="noindex, nofollow"><!-- marca fictícia -->
+  <meta name="theme-color" content="#120D0A">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Brasa Burger">
+  <meta property="og:title" content="Brasa Burger · Feito na brasa. Montado na hora.">
+  <meta property="og:description" content="Hambúrguer artesanal em Foz do Iguaçu. Peça direto pelo WhatsApp.">
+  <meta property="og:image" content="https://brasaburger.pages.dev/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Brasa Burger",
+    "description": "Hamburgueria artesanal na brasa. Modelo demonstrativo.",
+    "servesCuisine": ["Hambúrguer artesanal", "Lanches", "Defumados"],
+    "priceRange": "R$ 18 – R$ 42",
+    "acceptsReservations": "False",
+    "address": { "@type": "PostalAddress", "addressLocality": "Foz do Iguaçu", "addressRegion": "PR", "addressCountry": "BR" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "18:00", "closes": "23:30" }
+    ],
+    "hasMenu": "https://brasaburger.pages.dev/#cardapio"
+  }
+  </script>
+
+  <link rel="preload" href="fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="midia/hero-9x16-poster.webp" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="midia/hero-16x9-poster.webp" media="(min-width: 768px)">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="demo-bar">
+    <a href="https://estudioforja.com.br/">← <span class="so-desk">Voltar ao </span>Estúdio Forja</a>
+    <span class="demo-bar__tag"><span class="so-desk">Modelo </span>demonstrativo</span>
+  </div>
+
+  <header class="topo" data-topo>
+    <div class="container topo__in">
+      <a href="#inicio" class="marca" aria-label="Brasa Burger, início">
+        <svg class="marca__simbolo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3c2 5 8 7 8 15a8 8 0 0 1-16 0c0-4 2-6 3-8 1 3 3 4 3 4-1-5 0-8 2-11Z" fill="currentColor"/></svg>
+        <span class="marca__nome">Brasa<span>Burger</span></span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#anatomia">O burger</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#direto">Como pedir</a>
+        <a href="#onde">Onde fica</a>
+      </nav>
+      <a href="#pedido" class="botao botao--pequeno" data-pedido="Olá! Vi o site e quero fazer um pedido.">Pedir agora</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- 1. HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__midia" aria-hidden="true">
+        <picture>
+          <source media="(min-width: 768px)" srcset="midia/hero-16x9-poster.webp">
+          <img src="midia/hero-9x16-poster.webp" alt="" width="720" height="1280" fetchpriority="high">
+        </picture>
+        <video class="hero__video" muted playsinline loop preload="none"
+               data-mob-mp4="midia/hero-9x16.mp4" data-mob-webm="midia/hero-9x16.webm"
+               data-desk-mp4="midia/hero-16x9.mp4" data-desk-webm="midia/hero-16x9.webm"></video>
+      </div>
+      <div class="hero__veu" aria-hidden="true"></div>
+      <div class="container hero__texto">
+        <p class="rotulo" data-hero-anim>Hamburgueria artesanal · Foz do Iguaçu</p>
+        <h1 class="hero__titulo">
+          <span class="linha"><span data-hero-anim>Feito na brasa.</span></span>
+          <span class="linha"><span data-hero-anim class="quente">Montado na hora.</span></span>
+        </h1>
+        <p class="hero__sub" data-hero-anim>Carne moída no dia, pão assado aqui e chapa a 250 °C. Peça direto pelo WhatsApp e retire ou receba em casa.</p>
+        <div class="hero__acoes" data-hero-anim>
+          <a href="#pedido" class="botao" data-pedido="Olá! Vi o site e quero pedir um burger.">Pedir meu burger</a>
+          <a href="#cardapio" class="link-seta">Ver o cardápio <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. FAIXA -->
+    <section class="provas" aria-label="Destaques">
+      <ul class="container provas__lista">
+        <li><strong>Carne moída no dia</strong><span>acém, peito e costela</span></li>
+        <li><strong>Pão da casa</strong><span>brioche assado toda manhã</span></li>
+        <li><strong>~40 min</strong><span>entrega no centro</span></li>
+      </ul>
+    </section>
+
+    <!-- 3. ANATOMIA (cena principal) -->
+    <section class="anatomia" id="anatomia" aria-labelledby="anatomia-titulo">
+      <div class="anatomia__palco">
+        <div class="anatomia__cab">
+          <p class="rotulo"><span class="num">01</span> Anatomia do Clássico</p>
+          <h2 class="titulo" id="anatomia-titulo">O queijo não <span class="quente">pede licença.</span></h2>
+          <p class="anatomia__dica" data-dica>Role devagar ↓</p>
+        </div>
+        <div class="anatomia__cena">
+          <div class="anatomia__brilho" aria-hidden="true" data-brilho></div>
+          <canvas class="anatomia__canvas" width="540" height="960" aria-hidden="true" data-canvas></canvas>
+          <img class="anatomia__fallback" src="midia/anatomia-aberto.webp" width="540" height="960"
+               alt="Hambúrguer Brasa Clássico com as camadas separadas: pão brioche, cebola na chapa, cheddar derretido esticando, blend de 160 gramas, picles, molho e pão de baixo" loading="lazy">
+          <ul class="anatomia__etiquetas" data-etiquetas>
+            <li style="--y: 9%" class="esq"><b>Brioche da casa</b><span>assado toda manhã</span></li>
+            <li style="--y: 30%" class="dir"><b>Cheddar inglês</b><span>derrete e estica</span></li>
+            <li style="--y: 50%" class="esq"><b>Blend 160 g</b><span>moído no dia, selado a 250 °C</span></li>
+            <li style="--y: 70%" class="dir"><b>Molho Brasa</b><span>receita da casa</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CARDÁPIO -->
+    <section class="cardapio secao" id="cardapio">
+      <div class="container">
+        <p class="rotulo" data-reveal><span class="num">02</span> Cardápio</p>
+        <h2 class="titulo" data-reveal>Escolhe o seu. <span class="quente">A chapa já tá quente.</span></h2>
+
+        <div class="burgers">
+          <article class="burger" data-reveal>
+            <img src="midia/classico-960.webp" srcset="midia/classico-480.webp 480w, midia/classico-960.webp 960w, midia/classico-1254.webp 1254w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 92vw" width="1254" height="1254" loading="lazy" alt="Brasa Clássico: blend com cheddar derretido, picles e cebola no pão brioche">
+            <div class="burger__info">
+              <div class="burger__linha"><h3>Brasa Clássico</h3><span class="preco">R$ 34</span></div>
+              <p>Blend 160 g, cheddar inglês, picles da casa, cebola na chapa e molho Brasa no brioche.</p>
+              <a href="#pedido" class="pedir" data-pedido="Olá! Vi no site e quero um Brasa Clássico.">Pedir este</a>
+            </div>
+          </article>
+          <article class="burger" data-reveal>
+            <img src="midia/smash-960.webp" srcset="midia/smash-480.webp 480w, midia/smash-960.webp 960w, midia/smash-1254.webp 1254w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 92vw" width="1254" height="1254" loading="lazy" alt="Duplo Smash: duas carnes prensadas com bordas crocantes, queijo americano duplo e cebola crispy">
+            <div class="burger__info">
+              <div class="burger__linha"><h3>Duplo Smash</h3><span class="preco">R$ 38</span></div>
+              <p>Duas carnes de 90 g prensadas na chapa até a borda ficar crocante. Americano duplo e cebola crispy.</p>
+              <a href="#pedido" class="pedir" data-pedido="Olá! Vi no site e quero um Duplo Smash.">Pedir este</a>
+            </div>
+          </article>
+          <article class="burger" data-reveal>
+            <img src="midia/costela-960.webp" srcset="midia/costela-480.webp 480w, midia/costela-960.webp 960w, midia/costela-1254.webp 1254w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 92vw" width="1254" height="1254" loading="lazy" alt="Costela Defumada: costela desfiada com barbecue escorrendo e queijo derretido">
+            <div class="burger__info">
+              <div class="burger__linha"><h3>Costela Defumada</h3><span class="preco">R$ 42</span></div>
+              <p>Costela desfiada depois de 12 horas no defumador, queijo prato e barbecue de rapadura.</p>
+              <a href="#pedido" class="pedir" data-pedido="Olá! Vi no site e quero um Costela Defumada.">Pedir este</a>
+            </div>
+          </article>
+          <article class="burger" data-reveal>
+            <img src="midia/baconjam-960.webp" srcset="midia/baconjam-480.webp 480w, midia/baconjam-960.webp 960w, midia/baconjam-1254.webp 1254w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 92vw" width="1254" height="1254" loading="lazy" alt="Bacon Jam: carne com geleia de bacon, gorgonzola e rúcula">
+            <div class="burger__info">
+              <div class="burger__linha"><h3>Bacon Jam</h3><span class="preco">R$ 41</span></div>
+              <p>Blend 160 g, geleia de bacon feita aqui, gorgonzola e rúcula. Doce, salgado e picante.</p>
+              <a href="#pedido" class="pedir" data-pedido="Olá! Vi no site e quero um Bacon Jam.">Pedir este</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="extras" data-reveal>
+          <img src="midia/acompanhamentos-960.webp" srcset="midia/acompanhamentos-480.webp 480w, midia/acompanhamentos-960.webp 960w, midia/acompanhamentos-1254.webp 1254w" sizes="(min-width: 1024px) 40vw, 92vw" width="1254" height="1254" loading="lazy" alt="Fritas rústicas com alecrim, onion rings e milkshake de doce de leite">
+          <div>
+            <h3 class="extras__titulo">Pra acompanhar</h3>
+            <ul>
+              <li><span>Fritas da casa <small>rústicas, alecrim e flor de sal</small></span><b>R$ 18</b></li>
+              <li><span>Onion rings</span><b>R$ 22</b></li>
+              <li><span>Milkshake de doce de leite</span><b>R$ 22</b></li>
+              <li><span>Combo <small>fritas + refri com qualquer burger</small></span><b>+ R$ 16</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. DIRETO COM A BRASA -->
+    <section class="direto secao" id="direto">
+      <div class="container direto__grade">
+        <div>
+          <p class="rotulo" data-reveal><span class="num">03</span> Como pedir</p>
+          <h2 class="titulo" data-reveal>Sem app <span class="quente">no meio.</span></h2>
+          <p class="direto__lead" data-reveal>O preço é o do cardápio. A taxa de entrega é a do seu bairro, e a gente fala antes de você confirmar.</p>
+        </div>
+        <ol class="passos" data-reveal>
+          <li><span>1</span><div><b>Chama no WhatsApp</b><p>O cardápio chega na hora, com foto e preço.</p></div></li>
+          <li><span>2</span><div><b>Monta do seu jeito</b><p>Sem cebola, queijo dobrado, ponto da carne. É só falar.</p></div></li>
+          <li><span>3</span><div><b>Paga e acompanha</b><p>Pix, cartão na entrega ou retirada. A gente avisa quando sair.</p></div></li>
+        </ol>
+        <a href="#pedido" class="botao direto__cta" data-reveal data-pedido="Olá! Vi no site e quero pedir direto pelo WhatsApp.">Pedir direto pelo WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- 6. FRONTEIRA (turistas) -->
+    <section class="fronteira" aria-labelledby="fronteira-titulo">
+      <div class="container fronteira__in">
+        <ul class="carimbos" aria-hidden="true" data-carimbos>
+          <li>Brasil</li><li>Argentina</li><li>Paraguai</li>
+        </ul>
+        <h2 class="titulo titulo--medio" id="fronteira-titulo" data-reveal>A fome não precisa <span class="quente">de visto.</span></h2>
+        <p data-reveal>Turista? Entregamos nos hotéis do centro e da Av. das Cataratas até as 23h. Depois das Cataratas, a melhor parada é aqui.</p>
+        <a href="#pedido" class="link-seta" data-reveal data-pedido="Olá! Estou num hotel em Foz e quero pedir um burger.">Pedir no meu hotel <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- 7. A CASA -->
+    <section class="casa secao" id="casa">
+      <div class="container casa__grade">
+        <figure class="casa__midia" data-reveal>
+          <img src="midia/casa-960.webp" srcset="midia/casa-480.webp 480w, midia/casa-960.webp 960w, midia/casa-1536.webp 1536w" sizes="(min-width: 1024px) 55vw, 100vw" width="1536" height="1024" loading="lazy"
+               alt="Salão da Brasa Burger à noite: chapa acesa no balcão de aço, defumador soltando fumaça e lâmpadas quentes">
+          <video class="casa__video" muted playsinline loop preload="none" data-mp4="midia/casa.mp4" data-webm="midia/casa.webm" aria-hidden="true"></video>
+        </figure>
+        <div>
+          <p class="rotulo" data-reveal><span class="num">04</span> A casa</p>
+          <h2 class="titulo titulo--medio" data-reveal>Chapa, fumaça <span class="quente">e nada de pressa.</span></h2>
+          <p data-reveal>A costela entra no defumador às 6h da manhã e só sai à tarde. O pão sai do forno antes do almoço. A chapa de ferro acende às 17h e não apaga até o último pedido.</p>
+          <p data-reveal>Dá para comer no salão, retirar no balcão ou receber em casa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. DÚVIDAS -->
+    <section class="duvidas secao" id="duvidas">
+      <div class="container duvidas__grade">
+        <div>
+          <p class="rotulo" data-reveal><span class="num">05</span> Dúvidas</p>
+          <h2 class="titulo titulo--medio" data-reveal>Antes de <span class="quente">pedir.</span></h2>
+        </div>
+        <div class="duvidas__lista" data-reveal>
+          <details name="duvidas"><summary>Entregam no meu bairro?</summary><p>Entregamos em todo o centro, Vila Yolanda, Jardim Central, Maracanã e na Av. das Cataratas. Fora disso, manda a localização no WhatsApp que a gente confere na hora.</p></details>
+          <details name="duvidas"><summary>Quanto tempo demora?</summary><p>No centro, cerca de 40 minutos. Sexta e sábado depois das 20h pode chegar a 60. Quando sair, a gente avisa.</p></details>
+          <details name="duvidas"><summary>Dá para escolher o ponto da carne?</summary><p>Dá. O padrão é ao ponto, rosado no meio. Pede mal passado ou bem passado na mensagem.</p></details>
+          <details name="duvidas"><summary>Tem opção sem carne?</summary><p>Tem o Brasa Veggie, de grão-de-bico e cogumelo na chapa. Ele não está nas fotos, mas está no cardápio do WhatsApp.</p></details>
+          <details name="duvidas"><summary>Fazem pedido para grupo ou festa?</summary><p>Fazemos, a partir de 10 burgers, com até 1 dia de antecedência. Chama no WhatsApp que a gente monta um combo.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. ONDE FICA -->
+    <section class="onde secao" id="onde">
+      <div class="container onde__grade">
+        <div>
+          <p class="rotulo" data-reveal><span class="num">06</span> Onde fica</p>
+          <h2 class="titulo titulo--medio" data-reveal>Centro de <span class="quente">Foz do Iguaçu.</span></h2>
+          <p class="onde__end" data-reveal>Endereço demonstrativo · Foz do Iguaçu, PR</p>
+          <div class="onde__acoes" data-reveal>
+            <a href="#pedido" class="botao" data-pedido="Olá! Vi no site e quero pedir para retirar.">Pedir para retirar</a>
+            <a href="#pedido" class="link-seta" data-pedido="mapa">Abrir no mapa <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <table class="horario" data-reveal>
+          <caption class="sr-only">Horário de funcionamento</caption>
+          <tbody>
+            <tr><th scope="row">Terça a domingo</th><td>18h – 23h30</td></tr>
+            <tr><th scope="row">Segunda</th><td>Fechado</td></tr>
+            <tr><th scope="row">Delivery</th><td>até 23h</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 10. FECHAMENTO -->
+    <section class="fecho">
+      <img class="fecho__fundo" src="midia/hero-16x9-960.webp" srcset="midia/hero-16x9-480.webp 480w, midia/hero-16x9-960.webp 960w, midia/hero-16x9-1536.webp 1536w" sizes="100vw" width="1536" height="1024" alt="" loading="lazy" aria-hidden="true">
+      <div class="container fecho__in">
+        <h2 class="titulo" data-reveal>Segunda você <span class="quente">pensa nisso.</span></h2>
+        <p data-reveal>Hoje é dia de brasa.</p>
+        <a href="#pedido" class="botao" data-reveal data-pedido="Olá! Vi o site e quero pedir um burger.">Pedir meu burger</a>
+      </div>
+    </section>
+
+    <!-- 11. SAIBA MAIS (texto para o Google, recolhido para não poluir) -->
+    <section class="saiba" aria-label="Sobre a Brasa Burger">
+      <div class="container">
+        <details class="saiba__caixa">
+          <summary>Saiba mais sobre a Brasa Burger em Foz do Iguaçu</summary>
+          <div class="saiba__texto">
+            <h2>Hambúrguer artesanal em Foz do Iguaçu, feito na brasa</h2>
+            <p>A Brasa Burger é uma hamburgueria artesanal no centro de Foz do Iguaçu, no Paraná. Todo hambúrguer é feito com carne moída no próprio dia, numa mistura de acém, peito e costela, e selado numa chapa de ferro fundido a 250 °C, que forma a casquinha tostada por fora e mantém a carne suculenta por dentro. O pão brioche é assado na casa toda manhã.</p>
+            <h3>Cardápio de hambúrgueres artesanais</h3>
+            <p>O cardápio é curto de propósito: o Brasa Clássico, com cheddar inglês, picles da casa e cebola na chapa; o Duplo Smash, com duas carnes prensadas e bordas crocantes; o Costela Defumada, com costela desfiada depois de 12 horas no defumador e barbecue de rapadura; e o Bacon Jam, com geleia de bacon, gorgonzola e rúcula. Para acompanhar, fritas rústicas com alecrim, onion rings e milkshake de doce de leite. Também há opção vegetariana, o Brasa Veggie.</p>
+            <h3>Delivery de hambúrguer em Foz do Iguaçu</h3>
+            <p>A Brasa Burger faz delivery próprio no centro de Foz do Iguaçu, Vila Yolanda, Jardim Central, Maracanã e na Avenida das Cataratas, inclusive em hotéis, com entrega em cerca de 40 minutos. O pedido é feito direto pelo WhatsApp, sem aplicativo no meio, com pagamento por Pix, cartão na entrega ou na retirada no balcão.</p>
+            <h3>Para turistas nas Cataratas do Iguaçu</h3>
+            <p>Para quem visita as Cataratas do Iguaçu, o Marco das Três Fronteiras ou faz compras no Paraguai, a Brasa Burger é uma opção de jantar perto dos hotéis, aberta de terça a domingo, das 18h às 23h30. Dá para comer no salão, retirar ou pedir no hotel.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__in">
+      <div>
+        <p class="marca__nome">Brasa<span>Burger</span></p>
+        <p>Hamburgueria artesanal · Foz do Iguaçu, PR</p>
+        <p>Ter a dom · 18h–23h30</p>
+      </div>
+      <div class="rodape__links">
+        <a href="privacidade.html">Política de privacidade</a>
+        <a href="termos.html">Termos de uso</a>
+      </div>
+      <p class="rodape__forja">© 2026 Brasa Burger (marca fictícia). Site criado por <a href="https://estudioforja.com.br/">Estúdio Forja ↗</a></p>
+    </div>
+  </footer>
+
+  <a href="#pedido" class="barra-pedido" data-barra data-pedido="Olá! Vi o site e quero fazer um pedido.">
+    <span>Pedir pelo WhatsApp</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4 0 .1 0 .7-.4 1.3Z"/></svg>
+  </a>
+
+  <div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-titulo" hidden data-modal>
+    <div class="demo-modal__caixa">
+      <p class="rotulo">Pedido de demonstração</p>
+      <h2 id="demo-titulo" class="titulo titulo--pequeno">Esse clique viraria um pedido.</h2>
+      <p>Num site de verdade, o WhatsApp da hamburgueria abriria agora com a mensagem pronta:</p>
+      <blockquote data-modal-msg></blockquote>
+      <p class="demo-modal__forja">A Brasa Burger é um projeto do <strong>Estúdio Forja</strong>. O seu negócio pode ter um site assim.</p>
+      <div class="demo-modal__acoes">
+        <a class="botao" href="https://wa.me/554591164764?text=Ol%C3%A1!%20Vi%20o%20projeto%20Brasa%20Burger%20e%20quero%20um%20site%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim</a>
+        <button type="button" class="link-seta" data-modal-fechar>Continuar explorando</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="vendor/ScrollTrigger.min.js" defer></script>
+  <script src="vendor/lenis.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+/* páginas de política de privacidade e termos de uso */
+.legal__topo { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.4rem; border-bottom: 1px solid var(--linha); }
+.legal__texto { max-width: 760px; padding-block: 3rem 5rem; }
+.legal__texto h2 { color: var(--creme); font-size: 1.2rem; margin: 2.2rem 0 .6rem; }
+.legal__texto ul { padding-left: 1.2rem; }
+.legal__texto li { margin-bottom: .4rem; }
+.legal__texto a { color: var(--brasa-clara); }
+.legal__aviso { margin-top: 3rem; padding: 1rem 1.2rem; border-left: 2px solid var(--brasa); background: var(--sup); font-size: .9rem; }

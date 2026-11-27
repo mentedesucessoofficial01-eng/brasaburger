@@ -124,7 +124,20 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 150; pointer-even
 }
 
 /* ---------- 3. anatomia (cena principal) ---------- */
-.anatomia { position: relative; height: 420vh; background: var(--base); }
+/* 230vh: abrir + segurar + fechar em ~1 tela e meia de rolagem (antes 420vh era longo demais) */
+.anatomia { position: relative; height: 230vh; background: var(--base); }
+/* pedido que aparece no auge da abertura */
+.anatomia__cta { position: absolute; left: 50%; bottom: calc(var(--folga) + 6px); z-index: 4; transform: translate(-50%, 12px); opacity: 0; pointer-events: none;
+  display: inline-flex; align-items: center; gap: .6rem; white-space: nowrap; padding: .7rem 1.1rem; border-radius: 999px;
+  background: rgba(18,13,10,.82); border: 1px solid rgba(255,194,61,.45); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  color: var(--creme); font-weight: 800; font-size: .92rem; text-decoration: none; transition: opacity .45s var(--ease), transform .6s var(--ease); }
+.anatomia__cta b { color: var(--queijo); }
+.anatomia__cta span { color: var(--brasa-clara); }
+.anatomia__cta.visivel { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+/* selo de mais pedido no cardápio (gatilho de escolha rápida) */
+.burger { position: relative; }
+.burger__selo { position: absolute; top: .8rem; left: .8rem; z-index: 2; padding: .3rem .65rem; border-radius: 999px; background: var(--queijo); color: #1a0d05;
+  font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .anatomia__palco { position: sticky; top: 0; height: 100svh; overflow: hidden; display: grid; grid-template-rows: auto 1fr; padding-top: calc(var(--topo-h) + 16px); }
 .anatomia__cab { position: relative; z-index: 3; padding-inline: var(--gutter); text-align: center; }
 .anatomia__cab .titulo { font-size: clamp(2.3rem, 10vw, 5rem); margin-bottom: .2em; }

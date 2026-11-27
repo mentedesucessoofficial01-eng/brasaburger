@@ -97,6 +97,7 @@
   var etiquetas = document.querySelector('[data-etiquetas]');
   var brilho = document.querySelector('[data-brilho]');
   var dica = document.querySelector('[data-dica]');
+  var ctaAnat = document.querySelector('[data-cta-anatomia]');
   var TOTAL = 71;
   var quadros = [];
   var alvoQuadro = 0, quadroAtual = -1, quadroSuave = 0;
@@ -140,16 +141,20 @@
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
   }
+  /* Fases da rolagem (seção de 230vh = ~1 tela e meia de rolagem no celular):
+     0–38% abre · 38–62% aberto (etiquetas + pedido) · 62–95% fecha · 95–100% fechado */
+  var ABRE = 0.38, SEGURA = 0.62, FECHA = 0.95;
   function progressoAnatomia(p) {
     var ultimo = TOTAL - 1, f;
-    if (p < 0.45) f = (p / 0.45) * ultimo;
-    else if (p < 0.75) f = ultimo;
-    else f = (1 - (p - 0.75) / 0.25) * ultimo;
+    if (p < ABRE) f = (p / ABRE) * ultimo;
+    else if (p < SEGURA) f = ultimo;
+    else if (p < FECHA) f = (1 - (p - SEGURA) / (FECHA - SEGURA)) * ultimo;
+    else f = 0;
     alvoQuadro = Math.max(0, Math.min(ultimo, f));
     if (dica) dica.style.opacity = p > 0.04 ? 0 : 1;
     if (brilho) {
       // pulso de brasa no auge da abertura
-      var b = p < 0.3 ? 0 : p < 0.45 ? (p - 0.3) / 0.15 : p < 0.75 ? 1 : Math.max(0, 1 - (p - 0.75) / 0.12);
+      var b = p < ABRE - 0.15 ? 0 : p < ABRE ? (p - (ABRE - 0.15)) / 0.15 : p < SEGURA ? 1 : Math.max(0, 1 - (p - SEGURA) / 0.12);
       brilho.style.opacity = (b * 0.95).toFixed(3);
       brilho.style.transform = 'translate(-50%, -50%) scale(' + (0.7 + b * 0.45).toFixed(3) + ')';
     }
@@ -158,12 +163,17 @@
   function loopAnatomia() {
     if (!rodando) return;
     // suaviza: o quadro "persegue" o alvo, sem saltos
-    quadroSuave += (alvoQuadro - quadroSuave) * 0.18;
+    quadroSuave += (alvoQuadro - quadroSuave) * 0.26;
     if (Math.abs(alvoQuadro - quadroSuave) < 0.01) quadroSuave = alvoQuadro;
     desenha(Math.round(quadroSuave));
     // etiquetas só aparecem quando o burger DESENHADO está mesmo aberto (nunca antes da imagem chegar)
     var abrir = quadroAtual >= TOTAL - 4 && alvoQuadro >= TOTAL - 4;
-    if (etiquetas && abrir !== abertas) { abertas = abrir; etiquetas.classList.toggle('visiveis', abrir); }
+    if (etiquetas && abrir !== abertas) {
+      abertas = abrir;
+      etiquetas.classList.toggle('visiveis', abrir);
+      // no auge da vontade (burger aberto, queijo esticando) aparece o pedido deste burger
+      if (ctaAnat) ctaAnat.classList.toggle('visivel', abrir);
+    }
     requestAnimationFrame(loopAnatomia);
   }
   if (anat && canvas && !reduz) {
